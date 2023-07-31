@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background:rgb(228, 228, 228);
+    padding: 10px;
+}
+.to-do{
+    width: 100%;
+    max-width: 540px;
+    background: rgb(119, 193, 216);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.to-do h2{
+    color: rgb(7, 1, 37);
+    display: flex;
+    align-items: center;
+    margin-bottom:30px;
+}
+.to-do i{
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    background:whitesmoke ;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background:rgb(7, 1, 37);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+
+ul li{
+    position: relative;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    margin-bottom: 10px;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 20px;
+    background:whitesmoke ;
+    overflow: visible;
+  overflow-wrap: anywhere;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-image: url(images/square-regular.svg);
+    background-size: cover;
+    background-position: center;
+    top: 11px;
+    left: 8px;
+}
+
+ul li span{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    line-height:40px;
+    color:#555;
+    text-align: center;
+    border-radius:50%;
+}
+
+ul li span:hover{
+    background-color: rgb(225, 225, 225);
+   
+}
+
+
+
+.checked{
+    color: grey;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/square-check-solid.svg);
+}
